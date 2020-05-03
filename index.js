@@ -17,8 +17,13 @@ async function scrape() {
 
 app.get(`/data`, async (req, res, next) => {
     res.json({
-        playerCount: playerCount
-    });
+        frames: [
+            {
+                text: playerCount,
+                icon: "i37230"
+            }
+        ]
+    })
 });
 
 app.listen(3000, () => {
